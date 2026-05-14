@@ -146,7 +146,7 @@ So sánh với Stage 2:
 
 **Demo:**
 ```bash
-uv run python stages/stage_4_milti_agent/main.py
+uv run python stages/stage_4_multi_agent/main.py
 ```
 
 Vẽ trên bảng:

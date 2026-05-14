@@ -11,8 +11,6 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-import httpx
-
 from a2a.server.apps import A2AFastAPIApplication
 from a2a.server.request_handlers import DefaultRequestHandler
 from a2a.server.tasks import InMemoryTaskStore

@@ -70,21 +70,41 @@ Nếu lỗi:
 
 ---
 
-## Bài Tập Nâng Cao (Optional)
+## Bài Tập Nâng Cao (Bonus Challenges)
 
-Sau khi hoàn thành 2 bài tập chính, bạn có thể thử:
+Sau khi hoàn thành 2 bài tập chính, thử các challenge có code hoàn chỉnh bên dưới:
 
 ### Challenge 1: Financial Agent
-Thêm `financial_agent` vào multi-agent system để phân tích thiệt hại tài chính.
+**File:** `challenge_1_financial_agent.py`  
+Thêm `financial_agent` vào multi-agent system với 2 tools tính toán thiệt hại tài chính và chi phí kiện tụng. Agent dùng ReAct pattern tương tự tax_agent và compliance_agent trong Stage 5.
+
+```bash
+uv run python exercises/challenge_1_financial_agent.py
+```
 
 ### Challenge 2: Conversation Memory
-Implement memory để agent nhớ các câu hỏi trước đó.
+**File:** `challenge_2_memory.py`  
+Implement memory để agent nhớ lịch sử câu hỏi trong cùng một session. Dùng `_append` reducer trong LangGraph State thay vì `_last_wins`.
 
-### Challenge 3: Custom Tool
-Tạo tool gọi API thực (ví dụ: tra cứu luật từ database online).
+```bash
+uv run python exercises/challenge_2_memory.py
+```
 
-### Challenge 4: Error Handling
-Thêm try-catch và retry logic khi tool fails.
+### Challenge 3: Custom Tool gọi API thực
+**File:** `challenge_3_custom_tool.py`  
+Tạo async tool dùng `httpx` để gọi Case Law API và Cornell LII API. Có fallback mock khi API không khả dụng.
+
+```bash
+uv run python exercises/challenge_3_custom_tool.py
+```
+
+### Challenge 4: Retry Logic với Exponential Backoff
+**File:** `challenge_4_retry.py`  
+3 pattern retry: decorator `@with_retry`, manual retry loop, và graceful degradation. Demo với simulated flaky LLM/tool calls.
+
+```bash
+uv run python exercises/challenge_4_retry.py
+```
 
 ---
 

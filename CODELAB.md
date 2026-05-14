@@ -238,12 +238,12 @@ Thêm `verbose=True` vào `create_react_agent()` để xem chi tiết quá trìn
 **Bước 1:** Chạy demo Stage 4
 
 ```bash
-uv run python stages/stage_4_milti_agent/main.py
+uv run python stages/stage_4_multi_agent/main.py
 ```
 
 **Bước 2:** Phân tích kiến trúc
 
-Mở `stages/stage_4_milti_agent/main.py`:
+Mở `stages/stage_4_multi_agent/main.py`:
 
 1. Tìm `class State(TypedDict)` — đây là shared state
 2. Tìm các agent functions: `law_agent`, `tax_agent`, `compliance_agent`
